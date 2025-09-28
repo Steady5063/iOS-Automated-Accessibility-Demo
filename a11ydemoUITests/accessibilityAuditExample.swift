@@ -12,7 +12,7 @@ final class accessibilityAuditExample: XCTestCase {
     var app: XCUIApplication!
        
        override func setUpWithError() throws {
-           continueAfterFailure = false
+           continueAfterFailure = true
            app = XCUIApplication()
            app.launch()
        }
@@ -21,38 +21,24 @@ final class accessibilityAuditExample: XCTestCase {
            app = nil
        }
        
-       // MARK: - Main Accessibility Audit Tests
-       
+       //Performing Accessibility Audit on Login Screen
        func testLoginScreenAccessibilityAudit() throws {
+           XCUIApplication().tabBars.buttons["Home"].tap()
            try app.performAccessibilityAudit()
        }
     
-       
-       // MARK: - Specific Issue Type Tests
-      /*
-       func testContrastIssues() throws {
-           try app.performAccessibilityAudit(for: .contrast) { issue in
-               XCTFail("Color contrast issue found: \(issue.compactDescription)")
-           }
+    
+        //Performing Accessibility Audit on Blaster Screen
+       func testBlasterScreenAccessibilityAudit() throws {
+           XCUIApplication().tabBars.buttons["Blasters"].tap()
+           try app.performAccessibilityAudit()
        }
-       
-       func testElementSizeIssues() throws {
-           try app.performAccessibilityAudit(for: .elementSize) { issue in
-               XCTFail("Element size issue found: \(issue.compactDescription)")
-           }
-       }
-       
-       func testHitRegionIssues() throws {
-           try app.performAccessibilityAudit(for: .hitRegion) { issue in
-               XCTFail("Hit region issue found: \(issue.compactDescription)")
-           }
-       }
-       
-       func testSufficientElementDescriptionIssues() throws {
-           try app.performAccessibilityAudit(for: .sufficientElementDescription) { issue in
-               XCTFail("Element description issue found: \(issue.compactDescription)")
-           }
-       }
-       */
-    }
+    
+       //Performing Accessibility Audit on Sabers Screen
+       func testSabersScreenAccessibilityAudit() throws {
+           XCUIApplication().tabBars.buttons["Sabers"].tap()
+           try app.performAccessibilityAudit()
+        }
+   
+}
 
