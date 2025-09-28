@@ -27,9 +27,8 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity, alignment:.leading)
                     .padding()
             }
-            TextField("UserName",
-                      text: $name,
-                      prompt: Text("Name").foregroundColor(.gray))
+            TextField("",
+                      text: $name)
             .padding(10)
             .overlay {
                 RoundedRectangle(cornerRadius: 10)
@@ -49,10 +48,11 @@ struct HomeView: View {
             Button {
               print("do login action")
             } label: {
-              Text("Sign In")
+              Text("Login")
               .font(.title2)
               .bold()
               .foregroundColor(.white)
+              .accessibilityLabel(Text("Login to your application"))
             }
             .frame(height: 50)
             .frame(maxWidth: .infinity)
