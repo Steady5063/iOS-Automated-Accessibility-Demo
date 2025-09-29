@@ -13,17 +13,20 @@ To help developers build a better automated accessibiltiy testing process in iOS
 
 ## Project Structure
 
+All of automated test cases live in the `a11yDemoUITests` folder. Each test file contains different ways in which to test automatically for accessibility issues in UI regression tests. 
+
 ### Accessibility Audit Example
 
-This testing example uses the 'performAccessibilityAudit()' function that comes with XCUI and runs a set of accessibility checks against the content you select. In this case it runs test cases against the 3 core screens in the test application. 
+This testing example uses the `performAccessibilityAudit()` function that comes with XCUI and runs a set of accessibility checks against the content you select. In this case it runs test cases against the 3 core screens in the test application. 
 
 Heres one example of the usage: 
 
-' swift 
+``` swift
 
     func testLoginScreenAccessibilityAudit() throws {
            XCUIApplication().tabBars.buttons["Home"].tap()
            try app.performAccessibilityAudit()
     }
+```
 
-'
+For more information on this, see the following: https://developer.apple.com/documentation/xcuiautomation/xcuiaccessibilityaudittype 
