@@ -1,6 +1,6 @@
 # iOS Automated Accessibility Demo
 <div align="center">
- <img src="./autoA11y.png" alt="Puppeteer Logo" width="250">
+ <img src="./mobileA11y.png" alt="iOS Automation Logo" width="250">
 </div>
 
 
