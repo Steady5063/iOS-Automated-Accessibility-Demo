@@ -1,6 +1,7 @@
 //
 //  accessibilityAuditExample.swift
-//  a11ydemo
+//  Automated accessibility testing using standard performAccessibilityAudit() function
+//  Each test case runs a scan of each of the screens, and returns a result of issues
 //
 //  Created by Mark Steadman on 9/27/25.
 //
