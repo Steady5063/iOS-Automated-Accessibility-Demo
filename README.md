@@ -1,4 +1,4 @@
-# iOS Automated Accessibility Demo
+# iOS Automated Accessibility Example Lib
 <div align="center">
  <img src="./mobileA11y2.png" alt="iOS Automation Logo" width="250">
 </div>
