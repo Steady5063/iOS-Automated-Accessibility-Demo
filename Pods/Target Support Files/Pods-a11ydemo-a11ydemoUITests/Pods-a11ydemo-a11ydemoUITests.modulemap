@@ -1,6 +1,0 @@
-framework module Pods_a11ydemo_a11ydemoUITests {
-  umbrella header "Pods-a11ydemo-a11ydemoUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
