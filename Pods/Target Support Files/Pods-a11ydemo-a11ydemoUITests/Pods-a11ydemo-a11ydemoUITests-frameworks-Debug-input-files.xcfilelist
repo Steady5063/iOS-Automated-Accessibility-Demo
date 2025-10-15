@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-a11ydemo-a11ydemoUITests/Pods-a11ydemo-a11ydemoUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AccessibilitySnapshot/AccessibilitySnapshot.framework
+${BUILT_PRODUCTS_DIR}/SnapshotTesting/SnapshotTesting.framework

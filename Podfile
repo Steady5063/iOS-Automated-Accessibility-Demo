@@ -10,11 +10,12 @@ target 'a11ydemo' do
   target 'a11ydemoTests' do
     inherit! :search_paths
     # Pods for testing
+      pod 'SnapshotTesting', '~> 1.8.1'
+      pod 'AccessibilitySnapshot', '~> 0.10.0'
   end
 
   target 'a11ydemoUITests' do
     # Pods for testing
-    pod 'AccessibilitySnapshot'
   end
 
 end

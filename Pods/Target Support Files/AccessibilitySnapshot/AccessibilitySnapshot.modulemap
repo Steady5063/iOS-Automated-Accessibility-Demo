@@ -1,0 +1,6 @@
+framework module AccessibilitySnapshot {
+  umbrella header "AccessibilitySnapshot-umbrella.h"
+
+  export *
+  module * { export * }
+}
