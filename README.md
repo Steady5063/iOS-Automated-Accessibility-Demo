@@ -13,7 +13,7 @@ To help developers build a better automated accessibiltiy testing process in iOS
 
 ## Project Structure
 
-All of automated test cases live in the `a11yDemoUITests` folder. Each test file contains different ways in which to test automatically for accessibility issues in UI regression tests. 
+All of automated test cases live in the `a11yDemoUITests` folder or `a11ydemoTests`. Each test file contains different ways in which to test automatically for accessibility issues in UI regression tests. 
 
 ### Accessibility Audit Example
 
@@ -30,3 +30,23 @@ Heres one example of the usage:
 ```
 
 For more information on this, see the following: https://developer.apple.com/documentation/xcuiautomation/xcuiaccessibilityaudittype 
+
+### Accessibility Snapshot example
+
+This test example demonstrates the usage of Accessibility snapshot library, which creates an accessibility hierarchy snapshot. If anything in the view changes within the accessibility hierarchy, the test case will fail and showcase the difference in compared to the original snapshot. 
+
+Here simple usage: 
+
+``` swift
+
+ func testHomeScreenAccessibility() {
+        let home = HomeView()
+        
+        let hostingController = UIHostingController(rootView: home)
+        hostingController.view.frame = UIScreen.main.bounds
+        assertSnapshot(matching: hostingController, as: .accessibilityImage)
+    }
+
+```
+
+For more information on accessibility snapshot testing, see the following: [https://developer.apple.com/documentation/xcuiautomation/xcuiaccessibilityaudittype ](https://github.com/cashapp/AccessibilitySnapshot)
